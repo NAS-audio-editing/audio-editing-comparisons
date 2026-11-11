@@ -22,7 +22,7 @@ python3 -m http.server 8000
 ```
 
 ## Data
-Full data archive (same content as this package): **<FIGSHARE_PRIVATE_LINK>**
+Full data archive (same content as this package): **https://figshare.com/s/4c54d308492f885c5df5**
 
 ## Anonymous repository
-**<ANONYMOUS_GITHUB_LINK>**
+Not used. The complete package is available from the Figshare private link above.
