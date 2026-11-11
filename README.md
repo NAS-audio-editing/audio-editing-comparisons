@@ -7,25 +7,19 @@ Ablation alpha=0.3). Sample identifiers and CLAP scores are intentionally hidden
 
 ## Contents
 - `index.html` — comparison page (one big title, two sections: MelodiaEdit and ZoME-Bench)
-- `data_v3.json` — sample list and method/audio mapping
+- `data_v3.json` — sample list and method/audio mapping (embedded into `index.html` at build time)
 - `audio/` — 310 mp3 clips (original + 9 methods per sample)
 - `figures/coefficient_schedules.png` — orthogonal-coefficient schedules (NSA vs FlowDC)
-- `null-space-alignment-for-inversion-free-music-editing/` — convenience path (redirect)
 
 ## Run locally
-The page uses `fetch()`, so serve it over HTTP (not `file://`):
+Serve the folder over HTTP:
 
 ```bash
-cd null-space-alignment-site   # or the repository root
 python3 -m http.server 8000
 # open http://localhost:8000/
 ```
 
-## Live page (rendered)
-https://nas-audio-editing.github.io/audio-editing-comparisons/
-
-## Data
-Full data archive (same content as this package): **https://figshare.com/s/4c54d308492f885c5df5**
-
-## Anonymous repository
-Not used. The complete package is available from the Figshare private link above.
+## Note
+The comparison page is self-contained: sample data is embedded in `index.html`, and all audio
+is referenced with relative paths, so the page can be rendered from a static host or from an
+anonymous review service without any server-side code.
