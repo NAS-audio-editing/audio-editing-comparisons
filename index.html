@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store">
+<title>Audio Editing Comparisons — Null-Space Alignment for Inversion-Free Music Editing</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1d2330;--muted:#6b7280;--line:#e5e7eb;--accent:#2f6fed;--soft:#eaf0ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  h1{font-size:34px;text-align:center;letter-spacing:-.02em;margin:44px 20px 28px}
+  h2{font-size:22px;margin:38px auto 14px;max-width:1120px;padding:0 20px;letter-spacing:-.01em}
+  main{max-width:1120px;margin:0 auto;padding:0 20px 40px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:20px;margin:0 0 18px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+  .head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+  .sid{font-weight:700;color:var(--accent)}
+  .cat{color:var(--muted);font-size:12px;background:#f3f4f6;border:1px solid var(--line);
+       border-radius:999px;padding:1px 9px}
+  .prompts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 14px}
+  .prompt{background:#f9fafb;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .lab{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+  .txt{font-size:14px}
+  .orig{margin:2px 0 14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+  .method{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
+  .method.ours{border-color:var(--accent);background:var(--soft)}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+  .mname{font-weight:600;font-size:13px}
+  audio{width:100%;height:34px}
+  @media (max-width:720px){.prompts{grid-template-columns:1fr}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<h1>Audio Editing Comparisons</h1>
+<main id="app"></main>
+<script>
+function el(tag, cls, text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
+function promptFrag(raw){
+  const frag=document.createDocumentFragment();
+  String(raw).split(/(\[[^\]]*\])/g).forEach(p=>{
+    if(/^\[[^\]]*\]$/.test(p)) frag.appendChild(el("b",null,p));
+    else frag.appendChild(document.createTextNode(p));
+  });
+  return frag;
+}
+function render(data){
+  const app=document.getElementById("app");
+  data.sections.forEach(sec=>{
+    const h=el("h2",null,sec.name); app.appendChild(h);
+    sec.samples.forEach(s=>{
+      const card=el("section","card");
+      const head=el("div","head");
+      head.appendChild(el("span","sid","Sample "+s.id));
+      if(s.category) head.appendChild(el("span","cat",s.category));
+      card.appendChild(head);
+      const prompts=el("div","prompts");
+      const p1=el("div","prompt"); p1.appendChild(el("div","lab","Original prompt"));
+      const t1=el("div","txt"); t1.appendChild(promptFrag(s.original_prompt)); p1.appendChild(t1);
+      const p2=el("div","prompt"); p2.appendChild(el("div","lab","Editing prompt"));
+      const t2=el("div","txt"); t2.appendChild(promptFrag(s.editing_prompt)); p2.appendChild(t2);
+      prompts.appendChild(p1); prompts.appendChild(p2); card.appendChild(prompts);
+      if(s.audio.original){
+        const o=el("div","orig"); o.appendChild(el("div","lab","Original audio"));
+        const a=el("audio"); a.controls=true; a.preload="none"; a.src=s.audio.original; o.appendChild(a);
+        card.appendChild(o);
+      }
+      const grid=el("div","grid");
+      sec.method_keys.forEach((m,idx)=>{
+        const au=s.audio[m]; if(!au) return;
+        const box=el("div","method"+(m==="ours"?" ours":""));
+        const top=el("div","top");
+        top.appendChild(el("span","mname",sec.methods[idx]));
+        box.appendChild(top);
+        const a=el("audio"); a.controls=true; a.preload="none"; a.src=au; box.appendChild(a);
+        grid.appendChild(box);
+      });
+      card.appendChild(grid); app.appendChild(card);
+    });
+  });
+}
+fetch("data_v3.json", {cache:"no-store"}).then(r=>r.json()).then(render);
+</script>
+</body>
+</html>

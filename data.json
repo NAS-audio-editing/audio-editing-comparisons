@@ -1,0 +1,610 @@
+{
+  "title": "Audio Editing Comparisons",
+  "sections": [
+    {
+      "name": "MelodiaEdit",
+      "methods": [
+        "Ours",
+        "MusicMagus",
+        "ZETA",
+        "SteerMusic",
+        "FireFlow",
+        "RF-solver",
+        "DirectAudioEdit",
+        "FLowEdit",
+        "Ablation \u03b1=0.3"
+      ],
+      "method_keys": [
+        "ours",
+        "magus",
+        "zeta",
+        "steer",
+        "fireflow",
+        "rf",
+        "dae",
+        "flowedit",
+        "abl"
+      ],
+      "samples": [
+        {
+          "id": "m011",
+          "original_prompt": "a upbeat music",
+          "editing_prompt": "a tense music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m011/original.mp3",
+            "ours": "audio/MelodiaEdit/m011/ours.mp3",
+            "dae": "audio/MelodiaEdit/m011/dae.mp3",
+            "magus": "audio/MelodiaEdit/m011/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m011/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m011/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m011/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m011/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m011/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m011/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m012",
+          "original_prompt": "a romantic music",
+          "editing_prompt": "a sneaky music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m012/original.mp3",
+            "ours": "audio/MelodiaEdit/m012/ours.mp3",
+            "dae": "audio/MelodiaEdit/m012/dae.mp3",
+            "magus": "audio/MelodiaEdit/m012/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m012/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m012/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m012/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m012/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m012/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m012/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m013",
+          "original_prompt": "a peaceful music",
+          "editing_prompt": "a tense music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m013/original.mp3",
+            "ours": "audio/MelodiaEdit/m013/ours.mp3",
+            "dae": "audio/MelodiaEdit/m013/dae.mp3",
+            "magus": "audio/MelodiaEdit/m013/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m013/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m013/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m013/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m013/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m013/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m013/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m014",
+          "original_prompt": "a tense music",
+          "editing_prompt": "a energetic music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m014/original.mp3",
+            "ours": "audio/MelodiaEdit/m014/ours.mp3",
+            "dae": "audio/MelodiaEdit/m014/dae.mp3",
+            "magus": "audio/MelodiaEdit/m014/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m014/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m014/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m014/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m014/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m014/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m014/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m015",
+          "original_prompt": "a energetic music",
+          "editing_prompt": "a sneaky music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m015/original.mp3",
+            "ours": "audio/MelodiaEdit/m015/ours.mp3",
+            "dae": "audio/MelodiaEdit/m015/dae.mp3",
+            "magus": "audio/MelodiaEdit/m015/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m015/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m015/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m015/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m015/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m015/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m015/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m016",
+          "original_prompt": "a upbeat music",
+          "editing_prompt": "a tense music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m016/original.mp3",
+            "ours": "audio/MelodiaEdit/m016/ours.mp3",
+            "dae": "audio/MelodiaEdit/m016/dae.mp3",
+            "magus": "audio/MelodiaEdit/m016/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m016/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m016/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m016/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m016/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m016/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m016/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m017",
+          "original_prompt": "a romantic music",
+          "editing_prompt": "a sad music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m017/original.mp3",
+            "ours": "audio/MelodiaEdit/m017/ours.mp3",
+            "dae": "audio/MelodiaEdit/m017/dae.mp3",
+            "magus": "audio/MelodiaEdit/m017/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m017/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m017/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m017/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m017/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m017/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m017/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m018",
+          "original_prompt": "a sneaky music",
+          "editing_prompt": "a romantic music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m018/original.mp3",
+            "ours": "audio/MelodiaEdit/m018/ours.mp3",
+            "dae": "audio/MelodiaEdit/m018/dae.mp3",
+            "magus": "audio/MelodiaEdit/m018/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m018/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m018/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m018/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m018/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m018/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m018/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m020",
+          "original_prompt": "a romantic music",
+          "editing_prompt": "a tense music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m020/original.mp3",
+            "ours": "audio/MelodiaEdit/m020/ours.mp3",
+            "dae": "audio/MelodiaEdit/m020/dae.mp3",
+            "magus": "audio/MelodiaEdit/m020/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m020/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m020/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m020/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m020/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m020/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m020/abl.mp3"
+          },
+          "category": "Mood"
+        },
+        {
+          "id": "m021",
+          "original_prompt": "a typical classical music",
+          "editing_prompt": "a typical rock music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m021/original.mp3",
+            "ours": "audio/MelodiaEdit/m021/ours.mp3",
+            "dae": "audio/MelodiaEdit/m021/dae.mp3",
+            "magus": "audio/MelodiaEdit/m021/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m021/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m021/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m021/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m021/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m021/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m021/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m023",
+          "original_prompt": "a typical classical music",
+          "editing_prompt": "a typical blues music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m023/original.mp3",
+            "ours": "audio/MelodiaEdit/m023/ours.mp3",
+            "dae": "audio/MelodiaEdit/m023/dae.mp3",
+            "magus": "audio/MelodiaEdit/m023/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m023/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m023/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m023/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m023/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m023/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m023/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m024",
+          "original_prompt": "a typical classical music",
+          "editing_prompt": "a typical rock music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m024/original.mp3",
+            "ours": "audio/MelodiaEdit/m024/ours.mp3",
+            "dae": "audio/MelodiaEdit/m024/dae.mp3",
+            "magus": "audio/MelodiaEdit/m024/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m024/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m024/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m024/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m024/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m024/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m024/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m025",
+          "original_prompt": "a typical folk music",
+          "editing_prompt": "a typical blues music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m025/original.mp3",
+            "ours": "audio/MelodiaEdit/m025/ours.mp3",
+            "dae": "audio/MelodiaEdit/m025/dae.mp3",
+            "magus": "audio/MelodiaEdit/m025/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m025/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m025/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m025/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m025/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m025/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m025/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m027",
+          "original_prompt": "a typical classical music",
+          "editing_prompt": "a typical funk music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m027/original.mp3",
+            "ours": "audio/MelodiaEdit/m027/ours.mp3",
+            "dae": "audio/MelodiaEdit/m027/dae.mp3",
+            "magus": "audio/MelodiaEdit/m027/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m027/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m027/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m027/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m027/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m027/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m027/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m028",
+          "original_prompt": "a typical electronic music",
+          "editing_prompt": "a typical funk music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m028/original.mp3",
+            "ours": "audio/MelodiaEdit/m028/ours.mp3",
+            "dae": "audio/MelodiaEdit/m028/dae.mp3",
+            "magus": "audio/MelodiaEdit/m028/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m028/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m028/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m028/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m028/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m028/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m028/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m029",
+          "original_prompt": "a typical classical music",
+          "editing_prompt": "a typical metal music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m029/original.mp3",
+            "ours": "audio/MelodiaEdit/m029/ours.mp3",
+            "dae": "audio/MelodiaEdit/m029/dae.mp3",
+            "magus": "audio/MelodiaEdit/m029/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m029/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m029/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m029/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m029/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m029/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m029/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m030",
+          "original_prompt": "a typical electronic music",
+          "editing_prompt": "a typical rock music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m030/original.mp3",
+            "ours": "audio/MelodiaEdit/m030/ours.mp3",
+            "dae": "audio/MelodiaEdit/m030/dae.mp3",
+            "magus": "audio/MelodiaEdit/m030/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m030/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m030/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m030/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m030/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m030/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m030/abl.mp3"
+          },
+          "category": "Style"
+        },
+        {
+          "id": "m001",
+          "original_prompt": "a solo guitar music",
+          "editing_prompt": "a solo taiko music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m001/original.mp3",
+            "ours": "audio/MelodiaEdit/m001/ours.mp3",
+            "dae": "audio/MelodiaEdit/m001/dae.mp3",
+            "magus": "audio/MelodiaEdit/m001/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m001/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m001/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m001/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m001/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m001/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m001/abl.mp3"
+          },
+          "category": "Instrument"
+        },
+        {
+          "id": "m002",
+          "original_prompt": "a solo hihat music",
+          "editing_prompt": "a solo violin music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m002/original.mp3",
+            "ours": "audio/MelodiaEdit/m002/ours.mp3",
+            "dae": "audio/MelodiaEdit/m002/dae.mp3",
+            "magus": "audio/MelodiaEdit/m002/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m002/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m002/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m002/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m002/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m002/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m002/abl.mp3"
+          },
+          "category": "Instrument"
+        },
+        {
+          "id": "m003",
+          "original_prompt": "a solo flute music",
+          "editing_prompt": "a solo trumpet music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m003/original.mp3",
+            "ours": "audio/MelodiaEdit/m003/ours.mp3",
+            "dae": "audio/MelodiaEdit/m003/dae.mp3",
+            "magus": "audio/MelodiaEdit/m003/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m003/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m003/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m003/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m003/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m003/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m003/abl.mp3"
+          },
+          "category": "Instrument"
+        },
+        {
+          "id": "m004",
+          "original_prompt": "a solo organ music",
+          "editing_prompt": "a solo trombone music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m004/original.mp3",
+            "ours": "audio/MelodiaEdit/m004/ours.mp3",
+            "dae": "audio/MelodiaEdit/m004/dae.mp3",
+            "magus": "audio/MelodiaEdit/m004/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m004/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m004/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m004/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m004/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m004/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m004/abl.mp3"
+          },
+          "category": "Instrument"
+        },
+        {
+          "id": "m007",
+          "original_prompt": "a solo saxophone music",
+          "editing_prompt": "a solo violin music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m007/original.mp3",
+            "ours": "audio/MelodiaEdit/m007/ours.mp3",
+            "dae": "audio/MelodiaEdit/m007/dae.mp3",
+            "magus": "audio/MelodiaEdit/m007/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m007/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m007/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m007/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m007/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m007/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m007/abl.mp3"
+          },
+          "category": "Instrument"
+        },
+        {
+          "id": "m008",
+          "original_prompt": "a solo guitar music",
+          "editing_prompt": "a solo violin music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m008/original.mp3",
+            "ours": "audio/MelodiaEdit/m008/ours.mp3",
+            "dae": "audio/MelodiaEdit/m008/dae.mp3",
+            "magus": "audio/MelodiaEdit/m008/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m008/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m008/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m008/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m008/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m008/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m008/abl.mp3"
+          },
+          "category": "Instrument"
+        },
+        {
+          "id": "m009",
+          "original_prompt": "a solo organ music",
+          "editing_prompt": "a solo accordion music",
+          "audio": {
+            "original": "audio/MelodiaEdit/m009/original.mp3",
+            "ours": "audio/MelodiaEdit/m009/ours.mp3",
+            "dae": "audio/MelodiaEdit/m009/dae.mp3",
+            "magus": "audio/MelodiaEdit/m009/magus.mp3",
+            "zeta": "audio/MelodiaEdit/m009/zeta.mp3",
+            "steer": "audio/MelodiaEdit/m009/steer.mp3",
+            "fireflow": "audio/MelodiaEdit/m009/fireflow.mp3",
+            "rf": "audio/MelodiaEdit/m009/rf.mp3",
+            "flowedit": "audio/MelodiaEdit/m009/flowedit.mp3",
+            "abl": "audio/MelodiaEdit/m009/abl.mp3"
+          },
+          "category": "Instrument"
+        }
+      ]
+    },
+    {
+      "name": "ZoME-Bench",
+      "methods": [
+        "Ours",
+        "MusicMagus",
+        "ZETA",
+        "SteerMusic",
+        "FireFlow",
+        "RF-solver",
+        "DirectAudioEdit",
+        "FLowEdit",
+        "Ablation \u03b1=0.3"
+      ],
+      "method_keys": [
+        "ours",
+        "magus",
+        "zeta",
+        "steer",
+        "fireflow",
+        "rf",
+        "dae",
+        "flowedit",
+        "static"
+      ],
+      "samples": [
+        {
+          "id": "z001",
+          "original_prompt": "a recording of renaissance music with soft wooden percussions and a mellow harmonized [flute] melody",
+          "editing_prompt": "a recording of renaissance music with soft wooden percussions and a mellow harmonized [guitar] melody",
+          "audio": {
+            "original": "audio/ZoME-Bench/z001/original.mp3",
+            "ours": "audio/ZoME-Bench/z001/ours.mp3",
+            "dae": "audio/ZoME-Bench/z001/dae.mp3",
+            "magus": "audio/ZoME-Bench/z001/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z001/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z001/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z001/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z001/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z001/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z001/static.mp3"
+          }
+        },
+        {
+          "id": "z002",
+          "original_prompt": "energetic [mariachi] music with mexican vihuela and maracas",
+          "editing_prompt": "mournful [mariachi] music with mexican vihuela and maracas",
+          "audio": {
+            "original": "audio/ZoME-Bench/z002/original.mp3",
+            "ours": "audio/ZoME-Bench/z002/ours.mp3",
+            "dae": "audio/ZoME-Bench/z002/dae.mp3",
+            "magus": "audio/ZoME-Bench/z002/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z002/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z002/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z002/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z002/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z002/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z002/static.mp3"
+          }
+        },
+        {
+          "id": "z005",
+          "original_prompt": "gothic rock with male voice [distortion] guitar simple percussion bass and synth at a moderate tempo",
+          "editing_prompt": "gothic rock with male voice [clean] guitar simple percussion bass and synth at a moderate tempo",
+          "audio": {
+            "original": "audio/ZoME-Bench/z005/original.mp3",
+            "ours": "audio/ZoME-Bench/z005/ours.mp3",
+            "dae": "audio/ZoME-Bench/z005/dae.mp3",
+            "magus": "audio/ZoME-Bench/z005/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z005/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z005/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z005/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z005/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z005/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z005/static.mp3"
+          }
+        },
+        {
+          "id": "z006",
+          "original_prompt": "a melancholic instrumental synth and piano song with a shofar at a [slow] tempo",
+          "editing_prompt": "a melancholic instrumental synth and piano song with a shofar at a [fast] tempo",
+          "audio": {
+            "original": "audio/ZoME-Bench/z006/original.mp3",
+            "ours": "audio/ZoME-Bench/z006/ours.mp3",
+            "dae": "audio/ZoME-Bench/z006/dae.mp3",
+            "magus": "audio/ZoME-Bench/z006/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z006/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z006/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z006/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z006/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z006/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z006/static.mp3"
+          }
+        },
+        {
+          "id": "z007",
+          "original_prompt": "a slow [melancholic] rock instrumental with acoustic guitars and a steady piano solo",
+          "editing_prompt": "a slow [joyful] rock instrumental with acoustic guitars and a steady piano solo",
+          "audio": {
+            "original": "audio/ZoME-Bench/z007/original.mp3",
+            "ours": "audio/ZoME-Bench/z007/ours.mp3",
+            "dae": "audio/ZoME-Bench/z007/dae.mp3",
+            "magus": "audio/ZoME-Bench/z007/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z007/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z007/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z007/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z007/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z007/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z007/static.mp3"
+          }
+        },
+        {
+          "id": "z009",
+          "original_prompt": "a low quality reverberant and emotional lullaby with a mellow girl vocal [plucked and staccato] strings melody muffled snare rolls and noise",
+          "editing_prompt": "a low quality reverberant and emotional lullaby with a mellow girl vocal [serene and smooth] strings melody muffled snare rolls and noise",
+          "audio": {
+            "original": "audio/ZoME-Bench/z009/original.mp3",
+            "ours": "audio/ZoME-Bench/z009/ours.mp3",
+            "dae": "audio/ZoME-Bench/z009/dae.mp3",
+            "magus": "audio/ZoME-Bench/z009/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z009/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z009/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z009/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z009/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z009/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z009/static.mp3"
+          }
+        },
+        {
+          "id": "z010",
+          "original_prompt": "a [slow] tempo glockenspiel song with the sound of bells recorded by an amateur",
+          "editing_prompt": "a [fast] tempo glockenspiel song with the sound of bells recorded by an amateur",
+          "audio": {
+            "original": "audio/ZoME-Bench/z010/original.mp3",
+            "ours": "audio/ZoME-Bench/z010/ours.mp3",
+            "dae": "audio/ZoME-Bench/z010/dae.mp3",
+            "magus": "audio/ZoME-Bench/z010/magus.mp3",
+            "zeta": "audio/ZoME-Bench/z010/zeta.mp3",
+            "steer": "audio/ZoME-Bench/z010/steer.mp3",
+            "fireflow": "audio/ZoME-Bench/z010/fireflow.mp3",
+            "rf": "audio/ZoME-Bench/z010/rf.mp3",
+            "flowedit": "audio/ZoME-Bench/z010/flowedit.mp3",
+            "static": "audio/ZoME-Bench/z010/static.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}
