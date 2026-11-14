@@ -3,7 +3,7 @@
 Static comparison page for the paper **Null-Space Alignment for Inversion-Free Music Editing**.
 The page shows the original/edit prompts, the source audio, and the outputs of nine methods
 (Ours, MusicMagus, ZETA, SteerMusic, FireFlow, RF-solver, DirectAudioEdit, FLowEdit,
-Ablation alpha=0.3). Sample identifiers and CLAP scores are intentionally hidden.
+Ablation alpha=0.3).
 
 ## Contents
 - `index.html` — comparison page (one big title, two sections: MelodiaEdit and ZoME-Bench)
