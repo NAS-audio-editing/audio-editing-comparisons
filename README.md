@@ -10,6 +10,7 @@ Ablation alpha=0.3).
 - `data_v3.json` — sample list and method/audio mapping (embedded into `index.html` at build time)
 - `audio/` — 310 mp3 clips (original + 9 methods per sample)
 - `figures/coefficient_schedules.png` — orthogonal-coefficient schedules (NSA vs FlowDC)
+- `figures/Fig1.png` — Fig. 1: CLAP similarity and LPAPS vs. the perpendicular weight α_t, on ZoME-Bench and MelodiaEdit
 
 ## Run locally
 Serve the folder over HTTP:
